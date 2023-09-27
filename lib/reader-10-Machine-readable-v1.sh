@@ -43,10 +43,16 @@ case "$format" in
   *'http://dep.debian.net/deps/dep5'*)
     result=$(grep '^License:' "$copyrightfile" | cut -d':' -f2-)
     ;;
+  *'https://dep.debian.net/deps/dep5'*)
+    result=$(grep '^License:' "$copyrightfile" | cut -d':' -f2-)
+    ;;
   *'http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?'*)
     result=$(grep '^License:' "$copyrightfile" | cut -d':' -f2-)
     ;;
   *'http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?'*)
+    result=$(grep '^License:' "$copyrightfile" | cut -d':' -f2-)
+    ;;
+  *'https://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?'*)
     result=$(grep '^License:' "$copyrightfile" | cut -d':' -f2-)
     ;;
   *'http://anonscm.debian.org/loggerhead/dep/dep5/trunk/annotate/179/dep5/copyright-format.xml'*)
